@@ -1,0 +1,61 @@
+ 
+ /* Start Main Rulez */
+
+ body {
+    background-color: #F4F4F4;
+    font-size: 16px;
+ }
+
+ /* End Main Rulez  */
+ 
+ 
+ /* Start login form */
+
+
+  .login {
+    width: 300px;
+    margin: 100px auto;
+ }
+
+ .login h4 {
+    color: #888;
+ }
+ .login input {
+    margin-bottom: 10px ;
+ }
+
+
+ .login .From-control {
+    background-color:  #EAEAEA;
+ }
+ .login .btn {
+    width: 100%;
+    font-size: 18px;
+    display: inline-block;
+    margin: auto;
+    border: none;
+    background: #48026b;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 11px 25px;
+ }
+
+
+  /* End login form */
+
+
+  /* Start bootStrap Edit */
+
+
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+
+}
+
+.nav-link {
+    padding: 12px 11px;
+}
+
+   /* End bootStrap Edit */
