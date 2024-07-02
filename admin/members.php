@@ -8,7 +8,7 @@
 	*/
 
 	ob_start(); // Output Buffering Start
-
+ 
 	session_start();
 
 	$pageTitle = 'Members';
@@ -257,13 +257,13 @@
 
 					// Check If User Exist in Database
 
-					//$check = checkItem("Username", "users", $user);
+					$check = checkItem("Username", "users", $user);
 
 					if ($check == 1) {
 
 						$theMsg = '<div class="alert alert-danger">Sorry This User Is Exist</div>';
 
-					//	redirectHome($theMsg, 'back');
+						redirectHome($theMsg, 'back');
 
 					} else {
 
@@ -286,7 +286,7 @@
 
 						$theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted</div>';
 
-					//	redirectHome($theMsg, 'back');
+						redirectHome($theMsg, 'back');
 
 					}
 
@@ -299,7 +299,7 @@
 
 				$theMsg = '<div class="alert alert-danger">Sorry You Cant Browse This Page Directly</div>';
 
-				//redirectHome($theMsg);
+				redirectHome($theMsg);
 
 				echo "</div>";
 
@@ -334,13 +334,13 @@
 			if ($count > 0) { ?>
 
 				<h1 class="text-center">Edit Member</h1>
-				<div class="container ">
+				<div class="container">
 					<form class="form-horizontal" action="?do=Update" method="POST">
 						<input type="hidden" name="userid" value="<?php echo $userid ?>" />
 						<!-- Start Username Field -->
 						<div class="form-group form-group-lg">
 							<label class="col-sm-2 control-label">Username</label>
-							<div class="col-sm-10 col-md-3">
+							<div class="col-sm-10 col-md-6">
 								<input type="text" name="username" class="form-control" value="<?php echo $row['Username'] ?>" autocomplete="off" required="required" />
 							</div>
 						</div>
@@ -348,7 +348,7 @@
 						<!-- Start Password Field -->
 						<div class="form-group form-group-lg">
 							<label class="col-sm-2 control-label">Password</label>
-							<div class="col-sm-10 col-md-3">
+							<div class="col-sm-10 col-md-6">
 								<input type="hidden" name="oldpassword" value="<?php echo $row['Password'] ?>" />
 								<input type="password" name="newpassword" class="form-control" autocomplete="new-password" placeholder="Leave Blank If You Dont Want To Change" />
 							</div>
@@ -357,7 +357,7 @@
 						<!-- Start Email Field -->
 						<div class="form-group form-group-lg">
 							<label class="col-sm-2 control-label">Email</label>
-							<div class="col-sm-10 col-md-3">
+							<div class="col-sm-10 col-md-6">
 								<input type="email" name="email" value="<?php echo $row['Email'] ?>" class="form-control" required="required" />
 							</div>
 						</div>
@@ -365,14 +365,14 @@
 						<!-- Start Full Name Field -->
 						<div class="form-group form-group-lg">
 							<label class="col-sm-2 control-label">Full Name</label>
-							<div class="col-sm-10 col-md-3">
+							<div class="col-sm-10 col-md-6">
 								<input type="text" name="full" value="<?php echo $row['FullName'] ?>" class="form-control" required="required" />
 							</div>
 						</div>
 						<!-- End Full Name Field -->
 						<!-- Start Submit Field -->
 						<div class="form-group form-group-lg">
-							<div class="col-sm-offset-2 col-sm-3">
+							<div class="col-sm-offset-2 col-sm-10">
 								<input type="submit" value="Save" class="btn btn-primary btn-lg" />
 							</div>
 						</div>
@@ -390,7 +390,7 @@
 
 				$theMsg = '<div class="alert alert-danger">Theres No Such ID</div>';
 
-				//redirectHome($theMsg);
+				redirectHome($theMsg);
 
 				echo "</div>";
 
@@ -465,7 +465,7 @@
 
 						$theMsg = '<div class="alert alert-danger">Sorry This User Is Exist</div>';
 
-						//redirectHome($theMsg, 'back');
+						redirectHome($theMsg, 'back');
 
 					} else { 
 
@@ -477,9 +477,9 @@
 
 						// Echo Success Message
 
-						echo $stmt->rowCount() . 'Record Updadted';
+						$theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Updated</div>';
 
-						//redirectHome($theMsg, 'back');
+						redirectHome($theMsg, 'back');
 
 					}
 
@@ -489,7 +489,7 @@
 
 				$theMsg = '<div class="alert alert-danger">Sorry You Cant Browse This Page Directly</div>';
 
-				//redirectHome($theMsg);
+				redirectHome($theMsg);
 
 			}
 
@@ -506,7 +506,7 @@
 
 				// Select All Data Depend On This ID
 
-				//$check = checkItem('userid', 'users', $userid);
+				$check = checkItem('userid', 'users', $userid);
 
 				// If There's Such ID Show The Form
 
@@ -520,13 +520,13 @@
 
 					$theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Deleted</div>';
 
-					//redirectHome($theMsg, 'back');
+					redirectHome($theMsg, 'back');
 
 				} else {
 
 					$theMsg = '<div class="alert alert-danger">This ID is Not Exist</div>';
 
-				//	redirectHome($theMsg);
+					redirectHome($theMsg);
 
 				}
 
@@ -543,7 +543,7 @@
 
 				// Select All Data Depend On This ID
 
-				//$check = checkItem('userid', 'users', $userid);
+				$check = checkItem('userid', 'users', $userid);
 
 				// If There's Such ID Show The Form
 
@@ -555,13 +555,13 @@
 
 					$theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Updated</div>';
 
-					//redirectHome($theMsg);
+					redirectHome($theMsg);
 
 				} else {
 
 					$theMsg = '<div class="alert alert-danger">This ID is Not Exist</div>';
 
-					//redirectHome($theMsg);
+					redirectHome($theMsg);
 
 				}
 

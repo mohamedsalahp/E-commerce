@@ -2,7 +2,27 @@ $(function () {
 
 	'use strict';
 
-	// Trigger The Selectboxit
+	// dashboard 
+
+	$('.toggle-info').click(function () {
+
+		$(this).toggleClass('selected').parent().next('.card-body').fadeToggle(100);
+
+		if ($(this).hasClass('selected')) {
+
+			$(this).html('<i class="fa fa-minus fa-lg"></i>');
+
+		} else {
+
+			$(this).html('<i class="fa fa-plus fa-lg"></i>');
+
+		}
+
+	});
+
+	// trigger the selectbox 
+
+	$("select").selectBoxIt();
 
 	// Hide Placeholder On Form Focus
 
@@ -18,20 +38,34 @@ $(function () {
 
 	});
 
-	// Add Asterisk On Required Field
 
 
-	// Convert Password Field To Text Field On Hover
 
-	
-	// Confirmation Message On Button
+	var passField = $('.password');
 
-	
-	// Category View Option
+	$('.show-pass').hover(function () {
+		
+		passField.attr('type', 'text')
 
-	
+	}, function(){
 
-	// Show Delete Button On Child Cats
+		passField.attr('type', 'password')
+
+	});
+
+	// confrim messege on delete btn 
 
 
+	$('.confirm').click(function(){
+
+		return confirm('Are you sure?');
+	});
+
+
+	// cat show view option 
+
+	$('.cat h3').click(function () {
+
+		$(this).next('.full-view').fadeToggle(200);
+	});
 });
