@@ -2,9 +2,14 @@
 <?php
 session_start();
 if (isset($_SESSION['Username'])) {
+    $pageTitle = 'Dashboard';
+
     include 'init.php';
-    echo 'hi';
+
+   // print_r($_SESSION);
+
     include $tpl . 'footer.php';
+
 } else {
    // echo 'YOU ARE NOT Authorized ot view this page';
 

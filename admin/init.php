@@ -4,13 +4,15 @@
 include 'connect.php';
 // Routes 
 $tpl = 'includes/templates/';  // Template Directory 
-$css = 'layout/css/';  // css Directory
-$js = 'layout/js/';  // js Directory
-$lang = 'includes/lang/'; // lang Directory
+$lang = 'includes/lang/';     // lang Directory
+$func = 'includes/functions/';                  //function directory 
+$css = 'layout/css/';       // css Directory
+$js = 'layout/js/';        // js Directory
 
 
 // include the imp files 
 
+include $func . 'functions.php';
 include $lang . 'en.php';
 include  $tpl . 'header.php';
 

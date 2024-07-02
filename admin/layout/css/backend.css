@@ -1,4 +1,3 @@
- 
  /* Start Main Rulez */
 
  body {
@@ -7,12 +6,12 @@
  }
 
  /* End Main Rulez  */
- 
- 
+
+
  /* Start login form */
 
 
-  .login {
+ .login {
     width: 300px;
     margin: 100px auto;
  }
@@ -20,42 +19,79 @@
  .login h4 {
     color: #888;
  }
+
  .login input {
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
  }
 
 
  .login .From-control {
-    background-color:  #EAEAEA;
+    background-color: #EAEAEA;
  }
+
  .login .btn {
     width: 100%;
     font-size: 18px;
     display: inline-block;
     margin: auto;
     border: none;
-    background: #48026b;
+    background: #8005bd;
     border-radius: 20px;
     cursor: pointer;
     padding: 11px 25px;
  }
 
 
-  /* End login form */
+ /* End login form */
 
 
-  /* Start bootStrap Edit */
+ /* Start bootStrap Edit */
 
 
 
-.navbar {
+ .navbar {
     border-radius: 0;
     margin-bottom: 0;
 
-}
+ }
 
-.nav-link {
+ .nav-link {
     padding: 12px 11px;
-}
+ }
 
-   /* End bootStrap Edit */
+
+
+
+ /* End bootStrap Edit */
+
+
+
+
+ /* Start Members Page */
+
+
+ h1 {
+    font-size: 40px;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #888;
+ }
+ .container {
+   position: relative;
+   left: 500px;
+   top: 7px;
+ }
+
+ form .btn {
+   width: 100%;
+   font-size: 18px;
+   margin: auto;
+   background: #870fc4;
+   border-radius: 20px;
+   cursor: pointer;
+   padding: 11px 25px;
+   position: relative;
+   top: 13px;
+ }
+
+ /* End  Members Page */
